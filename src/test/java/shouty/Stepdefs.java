@@ -24,6 +24,13 @@ public class Stepdefs {
 
     }
 
+    @Given("Create Lucy")
+    public void createLucy() {
+        System.out.println("This is background scenario");
+
+    }
+
+
 
 
 }
