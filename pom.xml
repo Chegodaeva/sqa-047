@@ -2,16 +2,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cucumber</groupId>
-    <artifactId>cucumber-java-skeleton</artifactId>
+    <groupId>net.shipovalov</groupId>
+    <artifactId>shouty</artifactId>
     <version>0.0.1</version>
     <packaging>jar</packaging>
-    <name>Cucumber-Java Skeleton</name>
+    <name>Shout</name>
 
     <properties>
         <java.version>1.8</java.version>
         <junit.version>4.12</junit.version>
-        <cucumber.version>3.0.0</cucumber.version>
+        <cucumber.version>3.0.2</cucumber.version>
         <cucumber.pro.version>2.0.4</cucumber.pro.version>
         <maven.compiler.version>3.3</maven.compiler.version>
     </properties>
