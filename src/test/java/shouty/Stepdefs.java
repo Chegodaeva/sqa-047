@@ -1,14 +1,18 @@
 package shouty;
 
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import io.cucumber.datatable.DataTable;
-import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.List;
+import java.util.Date;
 
 public class Stepdefs {
+
+    public static WebDriver driver;
+
 
     @Given("(\\w+) (?:is|is standing) (\\d*) metres? from (\\w+)")
     public void lucyIsMetresFromSean(String name, String distance, String name2) {
@@ -34,18 +38,27 @@ public class Stepdefs {
 
     }
 
+    @Given("I meet Lucy")
+    public void i_meet_Lucy() {
+            return;
+    }
 
+    @Given("I have runnung browser")
+    public void i_have_runnung_browser() {
+        System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\drivers\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
 
-    @Given("I have dataTable")
-    public void i_have_dataTable(List<List<String>> table) {
-        for (int i = 0; i < table.size(); i++) {
-            for (int j = 0; j < table.get(i).size(); j++) {
-            System.out.println(table.get(i).get(j));
-        }
-        }
+    }
+
+    @Then("I open Google Page")
+    public void i_open_Google_Page() {
+        driver.get("https://google.com");
+        driver.quit();
 
 
     }
+
 
 }
 
