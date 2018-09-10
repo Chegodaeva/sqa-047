@@ -7,11 +7,10 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.Date;
 
 public class Stepdefs {
 
-    public static WebDriver driver;
+    public WebDriver driver;
 
 
     @Given("(\\w+) (?:is|is standing) (\\d*) metres? from (\\w+)")
@@ -46,7 +45,7 @@ public class Stepdefs {
     @Given("I have runnung browser")
     public void i_have_runnung_browser() {
         System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\drivers\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
 
     }
