@@ -3,34 +3,50 @@ package shouty;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.cucumber.datatable.DataTable;
+import org.junit.Assert;
+
+import java.util.List;
 
 public class Stepdefs {
 
-    @Given("Lucy is (\\d+)m from Sean")
-    public void lucy_is_m_from_Sean(int arg1) {
-        System.out.println(arg1);
+    @Given("(\\w+) (?:is|is standing) (\\d*) metres? from (\\w+)")
+    public void lucyIsMetresFromSean(String name, String distance, String name2) {
 
     }
 
-    @When("Sean shouts \"(.*?)\"$")
-    public void sean_shouts(String arg1) {
-        System.out.println(arg1);
+
+
+    @When("Sean shouts \"Free bagels\"")
+    public void seanShouts() {
 
     }
 
     @Then("Lucy should hear Sean's message")
-    public void lucy_should_hear_Sean_s_message() {
-        System.out.println("Close step");
+    public void lucyShouldHearSeanSMessage() {
+
 
     }
 
-    @Given("Create Lucy")
-    public void createLucy() {
-        System.out.println("This is background scenario");
+    @Then("Lucy pay (\\d*) (?:dollars|dollar|cent)")
+    public void lucy_pay_dollars(String summ) {
+        System.out.println(summ);
 
     }
 
 
 
+    @Given("I have dataTable")
+    public void i_have_dataTable(List<List<String>> table) {
+        for (int i = 0; i < table.size(); i++) {
+            for (int j = 0; j < table.get(i).size(); j++) {
+            System.out.println(table.get(i).get(j));
+        }
+        }
+
+
+    }
 
 }
+
+
