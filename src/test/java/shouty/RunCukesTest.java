@@ -8,7 +8,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = {"src\\test\\resources\\shouty\\"},
 snippets = SnippetType.CAMELCASE,
-dryRun = true)
+        tags = "@positive and @negative"
 
+)
 public class RunCukesTest {
 }

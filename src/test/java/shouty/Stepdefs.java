@@ -39,23 +39,7 @@ public class Stepdefs {
 
     @Given("I meet Lucy")
     public void i_meet_Lucy() {
-            return;
-    }
-
-    @Given("I have runnung browser")
-    public void i_have_runnung_browser() {
-        System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\drivers\\chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-
-    }
-
-    @Then("I open Google Page")
-    public void i_open_Google_Page() {
-        driver.get("https://google.com");
-        driver.quit();
-
-
+        System.out.println("This is step of background scenario");
     }
 
 
