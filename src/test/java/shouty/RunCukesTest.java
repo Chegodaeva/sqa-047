@@ -6,10 +6,9 @@ import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = {"src\\test\\resources\\shouty\\"},
-snippets = SnippetType.CAMELCASE,
-        tags = "@positive and @negative"
-
+@CucumberOptions(features = {"src\\test\\resources\\mantis\\"},
+snippets = SnippetType.CAMELCASE
 )
+
 public class RunCukesTest {
 }
