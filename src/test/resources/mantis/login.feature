@@ -2,6 +2,8 @@
 Feature: Login
 
   Scenario: User can login with right credentianls
-    When I open login page
+    Given I open login page
+    When I fill login form
+
 
 
