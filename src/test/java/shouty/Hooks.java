@@ -1,5 +1,6 @@
 package shouty;
 
+import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
@@ -7,25 +8,18 @@ import cucumber.api.java.Before;
 
 public class Hooks {
 
-    @Before(value = "@positive" , order = 1)
+    @Before
     public void beforeMethod(){
-        System.out.println("This is before method POSITIVE");
-    }
-
-    @Before({"@negative","@positive"})
-    public void someBeforeMethod(){
-        System.out.println("This is before method NEGATIVE");
+        System.out.println("This is before method");
     }
 
     @After()
-    public void afterMethod(){
-        System.out.println("This is after method first");
+    public void afterMethod(Scenario scenario){
+        if (scenario.isFailed()){
+            System.out.println(scenario.getName() + "is failed");
+        };
     }
 
-    @After()
-    public void someAfterMethod(){
-        System.out.println("This is after method second");
-    }
 
 
 
